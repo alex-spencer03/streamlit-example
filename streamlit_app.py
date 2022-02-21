@@ -15,7 +15,11 @@ forums](https://discuss.streamlit.io).
 In the meantime, below is an example of what you can do with just a few lines of code:
 """
 
-# Here's my first app bitches!
+st.write("Here's my first app bitches!")
+
+ff = st.slider('x')
+st.write(ff, 'squared is', ff*ff)
+
 
 with st.echo(code_location='below'):
     total_points = st.slider("Number of points in spiral", 1, 5000, 2000)
