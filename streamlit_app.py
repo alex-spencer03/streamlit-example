@@ -8,6 +8,9 @@ import streamlit as st
 # My first app
 """
 
+add_selectbox = st.sidebar.selectbox('How would you like to be contacted', ('Email','Home phone','Mobile phone'))
+add_slider = st.sidebar.slider('Select a range of values', 0.0,100.0,(25.0,75.0))
+
 ff = st.slider('Slider test')
 st.write(ff, 'squared is', ff*ff)
 
