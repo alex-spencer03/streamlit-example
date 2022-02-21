@@ -6,6 +6,7 @@ import streamlit as st
 
 """
 # My first app
+"""
 
 ff = st.slider('x')
 st.write(ff, 'squared is', ff*ff)
