@@ -42,7 +42,9 @@ st.map(filtered_data)
 
 
 
-
+if st.checkbox('Show raw data'):
+    st.subheader('Raw data')
+    st.write(data)
 
 
 
