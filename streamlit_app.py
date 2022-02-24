@@ -5,12 +5,9 @@ import pandas as pd
 import streamlit as st
 import numpy as np
 
-st.set_page_config(page_title='My first app', layout = 'wide')
+st.set_page_config(page_title='My first app', layout = 'wide', favicon=':shark:')
 
-st.experimental_set_query_params(
-     show_map=True,
-     selected=["asia", "america"],
- )
+
 
 st.title('Uber pickups in NYC')
 
