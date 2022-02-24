@@ -7,6 +7,11 @@ import numpy as np
 
 st.set_page_config(page_title='My first app', layout = 'wide')
 
+st.experimental_set_query_params(
+     show_map=True,
+     selected=["asia", "america"],
+ )
+
 st.title('Uber pickups in NYC')
 
 
