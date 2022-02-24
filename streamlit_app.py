@@ -35,6 +35,14 @@ hist_values = np.histogram(
 
 st.bar_chart(hist_values)
 
+st.subheader('Map of all pickups')
+
+st.map(data)
+
+
+
+
+
 
 
 add_selectbox = st.sidebar.selectbox('How would you like to be contacted', ('Email','Home phone','Mobile phone'))
