@@ -4,11 +4,9 @@ import math
 import pandas as pd
 import streamlit as st
 
-"""
-# My first app
-"""
 
 
+st.title('Uber pickups in NYC')
 
 add_selectbox = st.sidebar.selectbox('How would you like to be contacted', ('Email','Home phone','Mobile phone'))
 add_slider = st.sidebar.slider('Select a range of values', 0.0,100.0,(25.0,75.0))
