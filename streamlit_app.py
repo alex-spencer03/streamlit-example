@@ -18,8 +18,9 @@ with st.form("my_form"):
     name = st.text_input('1. Your name','')
     company = st.text_input('2. Your company','')
     profession = st.radio('3. Profession',('Quantity Surveyor','Architect','Project Manager', 'Client', 'Designer', 'Other'))
-    slider_val = st.slider("Form slider")
-    checkbox_val = st.checkbox("Form checkbox")
+    project_name = st.text_input('4. Project name','')
+    riba_stages = st.radio('5. RIBA Stages', ('Stage 0-1 Strategic Definition + Feasibility', 'Stage 2-4 Concept, Developed and Technical Design',\
+                                              'Stage 5-6 Construction + Handover', 'Stage 7 In Use'))
 
     # Every form must have a submit button.
     submitted = st.form_submit_button("Submit")
