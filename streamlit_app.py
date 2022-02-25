@@ -21,7 +21,7 @@ with st.form("my_form"):
     project_name = st.text_input('4. Project name','')
     riba_stages = st.radio('5. RIBA Stages', ('Stage 0-1 Strategic Definition + Feasibility', 'Stage 2-4 Concept, Developed and Technical Design',\
                                               'Stage 5-6 Construction + Handover', 'Stage 7 In Use'))
-    start_date = st.date_input('6. Start date on site', datetime.date())
+    start_date = st.date_input('6. Start date on site', datetime.date(2022,3,1))
 
     # Every form must have a submit button.
     submitted = st.form_submit_button("Submit")
