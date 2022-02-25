@@ -12,6 +12,10 @@ st.set_page_config(page_title='My first app', page_icon=':shark:', layout = 'wid
 
 st.title('Procurement & Tendering App')
 
+add_selectbox = st.sidebar.write('Welcome!')
+add_slider = st.sidebar.write('Please start by inputting your details and project information. Press submit to generate your options.')
+
+
 # form details
 #with st.form("my_form"):
 
@@ -48,9 +52,6 @@ with st.expander('Section 2'):
 
 
 
-
-add_selectbox = st.sidebar.selectbox('How would you like to be contacted', ('Email','Home phone','Mobile phone'))
-add_slider = st.sidebar.slider('Select a range of values', 0.0,100.0,(25.0,75.0))
 
 left_column, right_column = st.columns(2)
 left_column.button('Press me darling!')
