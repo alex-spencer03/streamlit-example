@@ -70,12 +70,17 @@ with col3:
         risk_transfer = st.slider('Risk transfer to the Contractor', min_value = 0, max_value = 5)
         overlapping = st.slider('Overlapping design and construction', min_value = 0, max_value = 5)
         contractor_involvement = st.slider('Contractor Involvement in Design', min_value = 0, max_value = 5)
+        provisional_sums = st.slider('Provisional Sums left in the Contract', min_value = 0, max_value = 5)
         market_competition = st.slider('Market Competition when Tendering', min_value = 0, max_value = 5)
         contractor_incentive = st.slider('Contractor Incentives for Risk Mitigation', min_value = 0, max_value = 5)
-        provisional_sums = st.slider('Provisional Sums left in the Contract', min_value = 0, max_value = 5)
         competition_regulations = st.slider('Compliance with competition regulations(public body)', min_value = 0, max_value = 5)
        
     
+######## CALCULATIONS ###########
+
+
+    
+
     
     ################## FORM DETAILS #################
 
