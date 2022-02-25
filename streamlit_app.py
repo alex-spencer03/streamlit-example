@@ -57,11 +57,11 @@ with st.expander('Procurement and Tendering Options'):
     
     st.write('16. Statements')
     st.markdown('Please rate the following on a 0 to 5 scale, 1 being the least important and 5 being the most important. Please see below some project examples that \
-    may apply for each of the statements:\
-    * 0 - not applicable\
-    * 1 - very low importance - for Provisional Sums Left in the Contract, you are accepting of having a large portion of the Contract Value (>10%) as Provisional Sums.\
+    may apply for each of the statements:
+    * 0 - not applicable
+    * 1 - very low importance - for Provisional Sums Left in the Contract, you are accepting of having a large portion of the Contract Value (>10%) as Provisional Sums.
     * 3 -  medium importance - for Contractor Involvement During Design, you are accepting in giving the Contractor design responsibility for some elements \
-    of the scheme (waterproofing, structural adaptions etc.)\
+    of the scheme (waterproofing, structural adaptions etc.)
     * 5 - very high importance - for Programme Certainty, you are a school that has to be open for term time on 1st September and there is no Plan B if the \
     #project is delayed.')
     
