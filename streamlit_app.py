@@ -12,7 +12,8 @@ st.set_page_config(page_title='My first app', page_icon=':shark:', layout = 'wid
 st.title('Procurement & Tendering App')
 
 with st.form("my_form"):
-    st.write("Inside the form")
+    st.write("Section 1")
+    st.text_input('You name','')
     slider_val = st.slider("Form slider")
     checkbox_val = st.checkbox("Form checkbox")
 
@@ -24,16 +25,7 @@ with st.form("my_form"):
 st.write("Outside the form")
 
 
-st.line_chart({"data": [1, 5, 2, 6, 2, 1]})
 
-with st.expander("See explanation"):
-     st.write("""
-         The chart above shows some numbers I picked for you.
-         I rolled actual dice for these, so they're *guaranteed* to
-         be random.
-     """)
-     st.image("https://static.streamlit.io/examples/dice.jpg")
-    
 
 
 add_selectbox = st.sidebar.selectbox('How would you like to be contacted', ('Email','Home phone','Mobile phone'))
