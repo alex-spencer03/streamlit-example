@@ -37,8 +37,47 @@ with col2:
         st.selectbox('12. Project value', ('< £1m', '£1m - £50m', '£50m - £100m', '£100m >'))
 
 
+with col3:
+    with st.expander('Tendering & Procurement'):
+        preferred_proc_route = st.radio('13. What is your preferred procurement route?', ('Design and Build', 'Traditional', 'Management'))
+        preferred_tend_route = st.radio('14. What is your preferred tendering route?', ('Single Stage', 'Two Stage', 'Negotiated'))
         
-################## FORM DETAILS #################
+        st.write('15. Please rank the following in terms of importance with 1 being the most important and 3 being the least important.')
+        
+        cost_certainty = st.slider('Cost Certainty',min_value=1, max_value=3, help='Cost Certainty refers to the importance of the Final Account price paid being \
+        the same as what was agreed at Contract Stage. For example, if you have no contingency at Contract Stage then achieving this price will be of high importance.')
+        
+        programme_certainty = st.slider('Programme/ Schedule Certainty', min_value = 1, max_value = 3, help='Programme / Schedule refers to the importance of meeting \
+        the deadline agreed at Contract Stage. For example, if you are working on a school that needs to be ready on the first day of term then this will be of high importance.')
+        
+        quality = st.slider('Quality', min_value = 1, max_value = 3, help = 'Quality refers to the importance of achieving a specific tolerance level. For example, \
+        if you are working on a 5* hotel development then meeting the the quality level and tight tolerance desired by the customer is of high importance.')
+        
+        st.write('16. Statements')
+        st.write('Please rate the following on a 0 to 5 scale, 1 being the least important and 5 being the most important. Please see below some project examples that \
+        may apply for each of the statements:')
+        
+        """
+        * 0 - not applicable
+        * 1 - very low importance - for Provisional Sums Left in the Contract, you are accepting of having a large portion of the Contract Value (>10%) as Provisional Sums.
+        * 3 -  medium importance - for Contractor Involvement During Design, you are accepting in giving the Contractor design responsibility for some elements \
+        of the scheme (waterproofing, structural adaptions etc.)
+        * 5 - very high importance - for Programme Certainty, you are a school that has to be open for term time on 1st September and there is no Plan B if the \
+        #project is delayed.')
+        """
+        
+        st.write('')   
+        risk_transfer = st.slider('Risk transfer to the Contractor', min_value = 0, max_value = 5)
+        overlapping = st.slider('Overlapping design and construction', min_value = 0, max_value = 5)
+        contractor_involvement = st.slider('Contractor Involvement in Design', min_value = 0, max_value = 5)
+        market_competition = st.slider('Market Competition when Tendering', min_value = 0, max_value = 5)
+        contractor_incentive = st.slider('Contractor Incentives for Risk Mitigation', min_value = 0, max_value = 5)
+        provisional_sums = st.slider('Provisional Sums left in the Contract', min_value = 0, max_value = 5)
+        competition_regulations = st.slider('Compliance with competition regulations(public body)', min_value = 0, max_value = 5)
+       
+    
+    
+    ################## FORM DETAILS #################
 
 #with st.expander('About You and Your Project'):
     # section 1 questions
@@ -64,40 +103,40 @@ with col2:
     
     # section 2 questions
     
-with st.expander('Procurement and Tendering Options'):
-    st.write('15. Please rank the following in terms of importance with 1 being the most important and 3 being the least important.')
+#with st.expander('Procurement and Tendering Options'):
+ #   st.write('15. Please rank the following in terms of importance with 1 being the most important and 3 being the least important.')
     
-    cost_certainty = st.slider('Cost Certainty',min_value=1, max_value=3, help='Cost Certainty refers to the importance of the Final Account price paid being \
-    the same as what was agreed at Contract Stage. For example, if you have no contingency at Contract Stage then achieving this price will be of high importance.')
+  #  cost_certainty = st.slider('Cost Certainty',min_value=1, max_value=3, help='Cost Certainty refers to the importance of the Final Account price paid being \
+   # the same as what was agreed at Contract Stage. For example, if you have no contingency at Contract Stage then achieving this price will be of high importance.')
     
-    programme_certainty = st.slider('Programme/ Schedule Certainty', min_value = 1, max_value = 3, help='Programme / Schedule refers to the importance of meeting \
-    the deadline agreed at Contract Stage. For example, if you are working on a school that needs to be ready on the first day of term then this will be of high importance.')
+#    programme_certainty = st.slider('Programme/ Schedule Certainty', min_value = 1, max_value = 3, help='Programme / Schedule refers to the importance of meeting \
+ #   the deadline agreed at Contract Stage. For example, if you are working on a school that needs to be ready on the first day of term then this will be of high importance.')
     
-    quality = st.slider('Quality', min_value = 1, max_value = 3, help = 'Quality refers to the importance of achieving a specific tolerance level. For example, \
-    if you are working on a 5* hotel development then meeting the the quality level and tight tolerance desired by the customer is of high importance.')
+  #  quality = st.slider('Quality', min_value = 1, max_value = 3, help = 'Quality refers to the importance of achieving a specific tolerance level. For example, \
+   # if you are working on a 5* hotel development then meeting the the quality level and tight tolerance desired by the customer is of high importance.')
     
-    st.write('16. Statements')
-    st.write('Please rate the following on a 0 to 5 scale, 1 being the least important and 5 being the most important. Please see below some project examples that \
-    may apply for each of the statements:')
+ #   st.write('16. Statements')
+  #  st.write('Please rate the following on a 0 to 5 scale, 1 being the least important and 5 being the most important. Please see below some project examples that \
+   # may apply for each of the statements:')
     
-    """
-    * 0 - not applicable
-    * 1 - very low importance - for Provisional Sums Left in the Contract, you are accepting of having a large portion of the Contract Value (>10%) as Provisional Sums.
-    * 3 -  medium importance - for Contractor Involvement During Design, you are accepting in giving the Contractor design responsibility for some elements \
-    of the scheme (waterproofing, structural adaptions etc.)
-    * 5 - very high importance - for Programme Certainty, you are a school that has to be open for term time on 1st September and there is no Plan B if the \
-    #project is delayed.')
-    """
+#    """
+ #   * 0 - not applicable
+  #  * 1 - very low importance - for Provisional Sums Left in the Contract, you are accepting of having a large portion of the Contract Value (>10%) as Provisional Sums.
+   # * 3 -  medium importance - for Contractor Involvement During Design, you are accepting in giving the Contractor design responsibility for some elements \
+  #  of the scheme (waterproofing, structural adaptions etc.)
+   # * 5 - very high importance - for Programme Certainty, you are a school that has to be open for term time on 1st September and there is no Plan B if the \
+ #   #project is delayed.')
+  #  """
     
-    st.write('')
+ #   st.write('')
     
-    risk_transfer = st.slider('Risk transfer to the Contractor', min_value = 0, max_value = 5)
-    overlapping = st.slider('Overlapping design and construction', min_value = 0, max_value = 5)
-    contractor_involvement = st.slider('Contractor Involvement in Design', min_value = 0, max_value = 5)
-    market_competition = st.slider('Market Competition when Tendering', min_value = 0, max_value = 5)
-    contractor_incentive = st.slider('Contractor Incentives for Risk Mitigation', min_value = 0, max_value = 5)
-    provisional_sums = st.slider('Provisional Sums left in the Contract', min_value = 0, max_value = 5)
-    competition_regulations = st.slider('Compliance with competition regulations(public body)', min_value = 0, max_value = 5)
+  #  risk_transfer = st.slider('Risk transfer to the Contractor', min_value = 0, max_value = 5)
+   # overlapping = st.slider('Overlapping design and construction', min_value = 0, max_value = 5)
+ #   contractor_involvement = st.slider('Contractor Involvement in Design', min_value = 0, max_value = 5)
+  #  market_competition = st.slider('Market Competition when Tendering', min_value = 0, max_value = 5)
+   # contractor_incentive = st.slider('Contractor Incentives for Risk Mitigation', min_value = 0, max_value = 5)
+ #   provisional_sums = st.slider('Provisional Sums left in the Contract', min_value = 0, max_value = 5)
+  #  competition_regulations = st.slider('Compliance with competition regulations(public body)', min_value = 0, max_value = 5)
    
 
 ############### CALCULATIONS ###################
