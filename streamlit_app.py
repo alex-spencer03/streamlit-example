@@ -24,7 +24,16 @@ with st.form("my_form"):
 st.write("Outside the form")
 
 
+st.line_chart({"data": [1, 5, 2, 6, 2, 1]})
 
+with st.expander("See explanation"):
+     st.write("""
+         The chart above shows some numbers I picked for you.
+         I rolled actual dice for these, so they're *guaranteed* to
+         be random.
+     """)
+     st.image("https://static.streamlit.io/examples/dice.jpg")
+    
 
 
 add_selectbox = st.sidebar.selectbox('How would you like to be contacted', ('Email','Home phone','Mobile phone'))
