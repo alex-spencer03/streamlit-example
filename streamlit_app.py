@@ -46,9 +46,15 @@ with st.expander('Testing'):
     
 with st.expander('Section 2'):
     st.write('15. Please rank the following in terms of importance with 1 being the most important and 3 being the least important.')
+    
     cost_certainty = st.slider('Cost Certainty',min_value=1, max_value=3, help='Cost Certainty refers to the importance of the Final Account price paid being \
     the same as what was agreed at Contract Stage. For example, if you have no contingency at Contract Stage then achieving this price will be of high importance.')
-
+    
+    programme_certainty = st.slider('Programme/ Schedule Certainty', min_value = 1, max_value = 3, help='Programme / Schedule refers to the importance of meeting \
+    the deadline agreed at Contract Stage. For example, if you are working on a school that needs to be ready on the first day of term then this will be of high importance.')
+    
+    quality = st.slider('Quality', min_value = 1, max_value = 3, help = 'Quality refers to the importance of achieving a specific tolerance level. For example, \
+    if you are working on a 5* hotel development then meeting the the quality level and tight tolerance desired by the customer is of high importance.')
 
 
 
