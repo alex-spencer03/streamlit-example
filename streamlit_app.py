@@ -9,13 +9,19 @@ st.set_page_config(page_title='My first app', page_icon=':shark:', layout = 'wid
 
 
 
-st.title('Uber pickups in NYC')
+st.title('Procurement & Tendering App')
 
-import streamlit.components.v1 as components
+with st.form("my_form"):
+    st.write("Inside the form")
+    slider_val = st.slider("Form slider")
+    checkbox_val = st.checkbox("Form checkbox")
 
-# embed streamlit docs in a streamlit app
-components.iframe("<iframe src="https://www.cognitoforms.com/f/1wMFzDlacU6aA2aDje5m_g/19" style="border:0;width:100%;" height="458"></iframe>
-<script src="https://www.cognitoforms.com/f/iframe.js"></script>")
+    # Every form must have a submit button.
+    submitted = st.form_submit_button("Submit")
+    if submitted:
+        st.write("slider", slider_val, "checkbox", checkbox_val)
+
+st.write("Outside the form")
 
 
 
