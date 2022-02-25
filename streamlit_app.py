@@ -12,7 +12,7 @@ st.set_page_config(page_title='My first app', page_icon=':shark:', layout = 'wid
 
 st.title('Procurement & Tendering App')
 
-add_selectbox = st.sidebar.write('Welcome!')
+add_selectbox = st.sidebar.write('# Welcome!')
 add_slider = st.sidebar.write('Please start by inputting your details and project information. Press submit to generate your options.')
 
 
@@ -67,6 +67,13 @@ with st.expander('Section 2'):
     (waterproofing, structural adaptions etc.)')
     st.write('5 - very high importance - for Programme Certainty, you are a school that has to be open for term time on 1st September and there is no Plan B if the \
     project is delayed.')
+    
+    risk_transfer = st.slider('Risk transfer to the Contractor', min_value = 0, max_value = 5)
+    overlapping = st.slider('Overlapping design and construction', min_value = 0, max_value = 5)
+    contractor_involvement = st.slider('Contractor Involvement in Design', min_value = 0, max_value = 5)
+    market_competition = st.slider('Market Competition when Tendering', min_value = 0, max_value = 5)
+    contractor_incentive = st.slider('Contractor Incentives for Risk Mitigation', min_value = 0, max_value = 5)
+    provisional_sums = st.slider('Provisional Sums left in the Contract', min_value = 0, max_value = 5)
    
 
 
