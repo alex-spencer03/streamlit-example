@@ -19,9 +19,8 @@ add_slider = st.sidebar.write('Please start by inputting your details and projec
 # form details
 #with st.form("my_form"):
 
-with st.expander('Testing'):
+with st.expander('About You and Your Project'):
     # section 1 questions
-    st.write("Section 1")
     name = st.text_input('1. Your name','')
     company = st.text_input('2. Your company','')
     profession = st.radio('3. Profession',('Quantity Surveyor','Architect','Project Manager', 'Client', 'Designer', 'Other'))
@@ -44,7 +43,7 @@ with st.expander('Testing'):
     
     # section 2 questions
     
-with st.expander('Section 2'):
+with st.expander('Procurement and Tendering Options'):
     st.write('15. Please rank the following in terms of importance with 1 being the most important and 3 being the least important.')
     
     cost_certainty = st.slider('Cost Certainty',min_value=1, max_value=3, help='Cost Certainty refers to the importance of the Final Account price paid being \
@@ -58,15 +57,22 @@ with st.expander('Section 2'):
     
     st.write('16. Statements')
     st.write('Please rate the following on a 0 to 5 scale, 1 being the least important and 5 being the most important. Please see below some project examples that \
-    may apply for each of the statements:')
-    st.write('0 - not applicable')
-    st.write(' 1 - very low importance - for Provisional Sums Left in the Contract, you are accepting of having a large portion of the Contract Value (>10%) as \
-    Provisional Sums.')
-    st.write('3 -  medium importance - for Contractor Involvement During Design, you are accepting in giving the Contractor design responsibility for some elements \
-    of the scheme \
-    (waterproofing, structural adaptions etc.)')
-    st.write('5 - very high importance - for Programme Certainty, you are a school that has to be open for term time on 1st September and there is no Plan B if the \
-    project is delayed.')
+    may apply for each of the statements:\
+    0 - not applicable\
+    1 - very low importance - for Provisional Sums Left in the Contract, you are accepting of having a large portion of the Contract Value (>10%) as Provisional Sums.\
+    3 -  medium importance - for Contractor Involvement During Design, you are accepting in giving the Contractor design responsibility for some elements \
+    of the scheme (waterproofing, structural adaptions etc.)\
+    5 - very high importance - for Programme Certainty, you are a school that has to be open for term time on 1st September and there is no Plan B if the \
+    #project is delayed.')
+    
+    
+    #st.write('0 - not applicable')
+    #st.write(' 1 - very low importance - for Provisional Sums Left in the Contract, you are accepting of having a large portion of the Contract Value (>10%) as \
+    #Provisional Sums.')
+    #st.write('3 -  medium importance - for Contractor Involvement During Design, you are accepting in giving the Contractor design responsibility for some elements \
+    #of the scheme (waterproofing, structural adaptions etc.)')
+    #st.write('5 - very high importance - for Programme Certainty, you are a school that has to be open for term time on 1st September and there is no Plan B if the \
+    #project is delayed.')
     
     risk_transfer = st.slider('Risk transfer to the Contractor', min_value = 0, max_value = 5)
     overlapping = st.slider('Overlapping design and construction', min_value = 0, max_value = 5)
