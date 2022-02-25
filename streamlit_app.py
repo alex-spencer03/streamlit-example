@@ -8,7 +8,9 @@ import numpy as np
 # configuring page settings
 st.set_page_config(page_title='My first app', page_icon=':shark:', layout = 'wide')
 
-
+[theme]
+base='light'
+primaryColor='purple'
 
 st.title('Procurement & Tendering App')
 
