@@ -5,15 +5,19 @@ import pandas as pd
 import streamlit as st
 import numpy as np
 
+# configuring page settings
 st.set_page_config(page_title='My first app', page_icon=':shark:', layout = 'wide')
 
 
 
 st.title('Procurement & Tendering App')
 
+# form details
 with st.form("my_form"):
     st.write("Section 1")
-    st.text_input('You name','')
+    name = st.text_input('1. Your name','')
+    company = st.text_input('2. Your company','')
+    profession = st.radio('3. Profession',('Quantity Surveyor','Architect','Project Manager', 'Client', 'Designer', 'Other'))
     slider_val = st.slider("Form slider")
     checkbox_val = st.checkbox("Form checkbox")
 
