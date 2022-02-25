@@ -14,7 +14,8 @@ st.title('Uber pickups in NYC')
 import streamlit.components.v1 as components
 
 # embed streamlit docs in a streamlit app
-components.iframe("https://docs.streamlit.io/en/latest")
+components.iframe("<iframe src="https://www.cognitoforms.com/f/1wMFzDlacU6aA2aDje5m_g/19" style="border:0;width:100%;" height="458"></iframe>
+<script src="https://www.cognitoforms.com/f/iframe.js"></script>")
 
 
 
