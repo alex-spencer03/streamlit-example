@@ -19,6 +19,8 @@ add_slider = st.sidebar.write('Please start by inputting your details and projec
 # form details
 #with st.form("my_form"):
 
+################## FORM DETAILS #################
+
 with st.expander('About You and Your Project'):
     # section 1 questions
     name = st.text_input('1. Your name','')
@@ -78,7 +80,14 @@ with st.expander('Procurement and Tendering Options'):
     provisional_sums = st.slider('Provisional Sums left in the Contract', min_value = 0, max_value = 5)
    
 
+############### CALCULATIONS ###################
 
+
+with st.form(key='columns_in_form'):
+    cols = st.beta_columns(5)
+    for i, col in enumerate(cols):
+        col.selectbox(f'Make a Selection', ['click', 'or click'], key=i)
+    submitted = st.form_submit_button('Submit')
 
 
 left_column, right_column = st.columns(2)
