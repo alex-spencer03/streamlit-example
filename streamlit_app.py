@@ -11,12 +11,13 @@ st.set_page_config(page_title='My first app', page_icon=':shark:', layout = 'wid
 
 st.title('Procurement & Tendering App')
 
-add_selectbox = st.sidebar.write('# Welcome!')
-add_slider = st.sidebar.write('Please start by inputting your details and project information. Press submit to generate your options.')
 
+col1, col2, col3 = st.columns((1,1,2))
 
-# form details
-#with st.form("my_form"):
+with col1:
+    with st.expander('Details'):
+        st.text_input('1. You', '')
+
 
 ################## FORM DETAILS #################
 
