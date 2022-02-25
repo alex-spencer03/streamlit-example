@@ -40,26 +40,26 @@ with col2:
         
 ################## FORM DETAILS #################
 
-with st.expander('About You and Your Project'):
+#with st.expander('About You and Your Project'):
     # section 1 questions
-    name = st.text_input('1. Your name','')
-    company = st.text_input('2. Your company','')
-    profession = st.radio('3. Profession',('Quantity Surveyor','Architect','Project Manager', 'Client', 'Designer', 'Other'))
-    project_name = st.text_input('4. Project name','')
-    riba_stages = st.radio('5. RIBA Stages', ('Stage 0-1 Strategic Definition + Feasibility', 'Stage 2-4 Concept, Developed and Technical Design',\
-                                              'Stage 5-6 Construction + Handover', 'Stage 7 In Use'))
-    start_date = st.date_input('6. Start date on site')
-    completion_date = st.date_input('7. Completion date')
-    client_name = st.text_input('8. Client name', '')
-    client_type = st.radio('9. Client type', ('Private', 'Public'))
-    sector = st.radio('10. Sector', ('Residential', 'Hotel', 'Primary and nursery education', 'Secondary education', 'Higher education', 'Commercial offices',\
-                                    'Corporate workspace', 'Healthcare', 'Government', 'Defense', 'Aviation', 'Life sciences/ Pharmaceuticals',\
-                                    'Industrial and logistics', 'Other'))
-    built_type = st.radio('11. Build type', ('New Build or New Build behind Retained Facade', 'Extension', 'Light Refurb (finishes only)', 'Medium Refurb (finishes + M&E)',\
-                                            'Heavy Refurb (finishes + M&E + structural)', 'New Build + Extension / Refurb'))
-    project_value = st.radio('12. Project value', ('< £1m', '£1m - £50m', '£50m - £100m', '£100m >'))
-    preferred_proc_route = st.radio('13. What is your preferred procurement route?', ('Design and Build', 'Traditional', 'Management'))
-    preferred_tend_route = st.radio('14. What is your preferred tendering route?', ('Single Stage', 'Two Stage', 'Negotiated'))
+ #   name = st.text_input('1. Your name','')
+  #  company = st.text_input('2. Your company','')
+   # profession = st.radio('3. Profession',('Quantity Surveyor','Architect','Project Manager', 'Client', 'Designer', 'Other'))
+    #project_name = st.text_input('4. Project name','')
+    #riba_stages = st.radio('5. RIBA Stages', ('Stage 0-1 Strategic Definition + Feasibility', 'Stage 2-4 Concept, Developed and Technical Design',\
+     #                                         'Stage 5-6 Construction + Handover', 'Stage 7 In Use'))
+#    start_date = st.date_input('6. Start date on site')
+ #   completion_date = st.date_input('7. Completion date')
+  #  client_name = st.text_input('8. Client name', '')
+  #  client_type = st.radio('9. Client type', ('Private', 'Public'))
+  #  sector = st.radio('10. Sector', ('Residential', 'Hotel', 'Primary and nursery education', 'Secondary education', 'Higher education', 'Commercial offices',\
+   #                                 'Corporate workspace', 'Healthcare', 'Government', 'Defense', 'Aviation', 'Life sciences/ Pharmaceuticals',\
+    #                                'Industrial and logistics', 'Other'))
+  #  built_type = st.radio('11. Build type', ('New Build or New Build behind Retained Facade', 'Extension', 'Light Refurb (finishes only)', 'Medium Refurb (finishes + M&E)',\
+    #                                        'Heavy Refurb (finishes + M&E + structural)', 'New Build + Extension / Refurb'))
+   # project_value = st.radio('12. Project value', ('< £1m', '£1m - £50m', '£50m - £100m', '£100m >'))
+    #preferred_proc_route = st.radio('13. What is your preferred procurement route?', ('Design and Build', 'Traditional', 'Management'))
+   # preferred_tend_route = st.radio('14. What is your preferred tendering route?', ('Single Stage', 'Two Stage', 'Negotiated'))
     
     
     # section 2 questions
