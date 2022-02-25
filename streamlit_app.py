@@ -68,13 +68,7 @@ with st.expander('Procurement and Tendering Options'):
     #project is delayed.')
     """
     
-    #st.write('0 - not applicable')
-    #st.write(' 1 - very low importance - for Provisional Sums Left in the Contract, you are accepting of having a large portion of the Contract Value (>10%) as \
-    #Provisional Sums.')
-    #st.write('3 -  medium importance - for Contractor Involvement During Design, you are accepting in giving the Contractor design responsibility for some elements \
-    #of the scheme (waterproofing, structural adaptions etc.)')
-    #st.write('5 - very high importance - for Programme Certainty, you are a school that has to be open for term time on 1st September and there is no Plan B if the \
-    #project is delayed.')
+    st.write('')
     
     risk_transfer = st.slider('Risk transfer to the Contractor', min_value = 0, max_value = 5)
     overlapping = st.slider('Overlapping design and construction', min_value = 0, max_value = 5)
