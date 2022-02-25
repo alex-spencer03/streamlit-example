@@ -20,7 +20,7 @@ add_slider = st.sidebar.write('Please start by inputting your details and projec
 
 ################## FORM DETAILS #################
 
-add_expander = st.sidebar.expander('About you):
+add_expander = st.sidebar.expander('About you'):
 
 #with st.expander('About You and Your Project'):
     # section 1 questions
