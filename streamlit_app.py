@@ -13,7 +13,10 @@ st.set_page_config(page_title='My first app', page_icon=':shark:', layout = 'wid
 st.title('Procurement & Tendering App')
 
 # form details
-with st.form("my_form"):
+#with st.form("my_form"):
+
+with st.expander('Testing')
+    # section 1 questions
     st.write("Section 1")
     name = st.text_input('1. Your name','')
     company = st.text_input('2. Your company','')
@@ -33,13 +36,15 @@ with st.form("my_form"):
     project_value = st.radio('12. Project value', ('< £1m', '£1m - £50m', '£50m - £100m', '£100m >'))
     preferred_proc_route = st.radio('13. What is your preferred procurement route?', ('Design and Build', 'Traditional', 'Management'))
     preferred_tend_route = st.radio('14. What is your preferred tendering route?', ('Single Stage', 'Two Stage', 'Negotiated'))
+    
+    # section 2 questions
+    
 
     # Every form must have a submit button.
-    submitted = st.form_submit_button("Submit")
-    if submitted:
-        st.write("slider", slider_val, "checkbox", checkbox_val)
+    #submitted = st.form_submit_button("Submit")
 
-st.write("Outside the form")
+
+#st.write("Outside the form")
 
 
 
@@ -63,23 +68,4 @@ ff = st.slider('Slider test')
 st.write(ff, 'squared is', ff*ff)
 
 
-with st.echo(code_location='below'):
-    total_points = st.slider("Number of points in spiral", 1, 5000, 2000)
-    num_turns = st.slider("Number of turns in spiral", 1, 100, 9)
 
-    Point = namedtuple('Point', 'x y')
-    data = []
-
-    points_per_turn = total_points / num_turns
-
-    for curr_point_num in range(total_points):
-        curr_turn, i = divmod(curr_point_num, points_per_turn)
-        angle = (curr_turn + 1) * 2 * math.pi * i / points_per_turn
-        radius = curr_point_num / total_points
-        x = radius * math.cos(angle)
-        y = radius * math.sin(angle)
-        data.append(Point(x, y))
-
-    st.altair_chart(alt.Chart(pd.DataFrame(data), height=500, width=500)
-        .mark_circle(color='#0068c9', opacity=0.5)
-        .encode(x='x:Q', y='y:Q'))
