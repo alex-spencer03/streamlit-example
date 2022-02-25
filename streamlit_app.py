@@ -15,10 +15,29 @@ st.title('Procurement & Tendering App')
 col1, col2, col3 = st.columns((1,1,2))
 
 with col1:
-    with st.expander('Details'):
-        st.text_input('1. You', '')
+    with st.expander('About You'):
+        st.text_input('1. Your name','')
+        st.text_input('2. Your company','')
+        st.radio('3. Profession',('Quantity Surveyor','Architect','Project Manager', 'Client', 'Designer', 'Other'))
+
+with col2:
+    with st.expander('About Your Project'):
+        st.text_input('4. Project name','')
+        st.radio('5. RIBA Stages', ('Stage 0-1 Strategic Definition + Feasibility', 'Stage 2-4 Concept, Developed and Technical Design',\
+                                    'Stage 5-6 Construction + Handover', 'Stage 7 In Use'))
+        st.date_input('6. Start date on site')
+        st.date_input('7. Completion date')
+        st.text_input('8. Client name', '')
+        st.radio('9. Client type', ('Private', 'Public'))
+        st.radio('10. Sector', ('Residential', 'Hotel', 'Primary and nursery education', 'Secondary education', 'Higher education', 'Commercial offices',\
+                                'Corporate workspace', 'Healthcare', 'Government', 'Defense', 'Aviation', 'Life sciences/ Pharmaceuticals',\
+                                'Industrial and logistics', 'Other'))
+        st.radio('11. Build type', ('New Build or New Build behind Retained Facade', 'Extension', 'Light Refurb (finishes only)', 'Medium Refurb (finishes + M&E)',\
+                                    'Heavy Refurb (finishes + M&E + structural)', 'New Build + Extension / Refurb'))
+        st.radio('12. Project value', ('< £1m', '£1m - £50m', '£50m - £100m', '£100m >'))
 
 
+        
 ################## FORM DETAILS #################
 
 with st.expander('About You and Your Project'):
@@ -78,9 +97,13 @@ with st.expander('Procurement and Tendering Options'):
     market_competition = st.slider('Market Competition when Tendering', min_value = 0, max_value = 5)
     contractor_incentive = st.slider('Contractor Incentives for Risk Mitigation', min_value = 0, max_value = 5)
     provisional_sums = st.slider('Provisional Sums left in the Contract', min_value = 0, max_value = 5)
+    competition_regulations = st.slider('Compliance with competition regulations(public body)', min_value = 0, max_value = 5)
    
 
 ############### CALCULATIONS ###################
+
+
+
 
 
 with st.form(key='columns_in_form'):
