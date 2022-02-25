@@ -12,7 +12,7 @@ st.set_page_config(page_title='My first app', page_icon=':shark:', layout = 'wid
 st.title('Procurement & Tendering App')
 
 
-col1, col2, col3 = st.columns((1,1,2))
+col1, col2, col3, col4 = st.columns((1,1,1,1))
 
 with col1:
     with st.expander('About You'):
