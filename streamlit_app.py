@@ -56,7 +56,7 @@ with st.expander('Section 2'):
     quality = st.slider('Quality', min_value = 1, max_value = 3, help = 'Quality refers to the importance of achieving a specific tolerance level. For example, \
     if you are working on a 5* hotel development then meeting the the quality level and tight tolerance desired by the customer is of high importance.')
     
-    sr.write('16. Statements')
+    st.write('16. Statements')
     st.write('Please rate the following on a 0 to 5 scale, 1 being the least important and 5 being the most important. Please see below some project examples that \
     may apply for each of the statements:')
     st.write('0 - not applicable')
