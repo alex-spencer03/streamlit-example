@@ -37,14 +37,14 @@ with st.expander('Testing'):
     preferred_proc_route = st.radio('13. What is your preferred procurement route?', ('Design and Build', 'Traditional', 'Management'))
     preferred_tend_route = st.radio('14. What is your preferred tendering route?', ('Single Stage', 'Two Stage', 'Negotiated'))
     
+    
     # section 2 questions
     
-
-    # Every form must have a submit button.
-    #submitted = st.form_submit_button("Submit")
-
-
-#st.write("Outside the form")
+with st.expander('Section 2'):
+    st.write('15. Please rank the following in terms of importance with 1 being the most important and 3 being the least important.')
+    cost_certainty = st.slider('Cost Certainty',min_value=1, max_value=3, help='Cost Certainty refers to the importance of the Final Account price paid being \
+    the same as what was agreed at Contract Stage. For example, if you have no contingency at Contract Stage then achieving this price will be of high importance. 
+')
 
 
 
