@@ -15,7 +15,7 @@ st.title('Procurement & Tendering App')
 # form details
 #with st.form("my_form"):
 
-with st.expander('Testing')
+with st.expander('Testing'):
     # section 1 questions
     st.write("Section 1")
     name = st.text_input('1. Your name','')
