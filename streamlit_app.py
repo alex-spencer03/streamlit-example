@@ -86,7 +86,7 @@ data = {'Question':['Price Certainty', 'Programme', 'Quality', 'Risk Transfer', 
                competition_regulations],\
        'Max value':[3,3,3,5,5,5,5,5,5,5],\
        'Global variable':[60,60,60,40,40,40,40,40,40,40],\
-       'Proc_Design':[0.33,0.5,0.33,0.5,0.33,0.5,0.5,0.33,0.5,0.38]\
+       'Proc_Design':[0.33,0.5,0.33,0.5,0.33,0.5,0.5,0.33,0.5,0.38],\
        'Proc_Traditional':[0.5,0.33,0.5,0.33,0.17,0.17,0.33,0.5,0.33,0.38]
        }
 #df = pd.DataFrame()
