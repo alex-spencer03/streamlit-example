@@ -79,6 +79,18 @@ with col1:
     
 ######## CALCULATIONS ###########
 
+# setting df with set values and user inputs
+data = {'Question':['Price Certainty', 'Programme', 'Quality', 'Risk Transfer', 'Overlapping', 'Contractor involvement', 'Provisional sums', 'Competition', 'Incentive',\
+                    'Competition regulations'],\
+       'Score':[cost_certainty, programme_certainty, quality,  risk_transfer, overlapping, contractor_involvement, provisional_sums, market_competition, contractor_incentive,\
+               competition_regulations],\
+       'Max value':[3,3,3,5,5,5,5,5,5,5],\
+       'Global variable':[60,60,60,40,40,40,40,40,40,40],\
+       'Proc_Design':[0.33,0.5,0.33,0.5,0.33,0.5,0.5,0.33,0.5,0.38]\
+       'Proc_Traditional':[0.5,0.33,0.5,0.33,0.17,0.17,0.33,0.5,0.33,0.38]
+       }
+#df = pd.DataFrame()
+
 
 
 
