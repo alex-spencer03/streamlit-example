@@ -203,8 +203,9 @@ final_tend.reset_index()
 with col1:
   st.subheader('Your Procurement Route')
   st.bar_chart(final_proc, height = 500)
-
- with col2:
+  
+  
+with col2:
   st.subheader('Your Tenderings Route')
   st.bar_chart(final_tend, height = 500)
   
