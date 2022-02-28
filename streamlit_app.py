@@ -13,7 +13,7 @@ st.title('Procurement & Tendering App')
 
 add_selectbox = st.sidebar.markdown('# Welcome!')
 
-col1, col2, col3, col4 = st.columns((1,1,1,1))
+col1, col2, col3 = st.columns((1,1,1))
 
  
 with col1:
@@ -76,41 +76,5 @@ with col1:
        
     
 ######## CALCULATIONS ###########
-
-# setting df with set values and user inputs
-data = {'Question':['Price', 'Programme', 'Quality', 'Risk', 'Overlapping', 'Contractor involvement', 'Provisional sums', 'Competition', 'Incentive', 'Competition regulations'],\
-        'Score':[cost_certainty, programme_certainty, quality,  risk_transfer, overlapping, contractor_involvement, provisional_sums, market_competition, contractor_incentive,\
-               competition_regulations],\
-        'Max value':[3,3,3,5,5,5,5,5,5,5],\
-        'Global variable':[60,60,60,40,40,40,40,40,40,40],\
-        'Proc_Design':[0.33,0.5,0.33,0.5,0.33,0.5,0.5,0.33,0.5,0.38],\
-        'Proc_Traditional':[0.5,0.33,0.5,0.33,0.17,0.17,0.33,0.5,0.33,0.38],\
-        'Proc_Management':[0.17,0.17,0.17,0.17,0.5,0.33,0.17,0.17,0.17,0.25],\
-        'Tendering_Single':[0.33, 0.29, 0.50, 0.38,	0.25, 0.17,	0.33, 0.50, 0.25, 0.38],\
-        'Tendering_Two':[0.33, 0.43, 0.33, 0.38, 0.38, 0.50, 0.33, 0.33, 0.38, 0.38],\
-        'Tendering_Negotiated':[0.33, 0.29, 0.17, 0.25, 0.38, 0.33, 0.33, 0.17, 0.38, 0.25]
-       }
-
-
-
-#df = pd.DataFrame()
-
-
-
-
-left_column, right_column = st.columns(2)
-left_column.button('Press me darling!')
-
-with right_column:
-    chosen = st.radio('Sorting hat',
-                      ("Gryffindor", "Ravenclaw", "Hufflepuff", "Slytherin"))
-    st.write(f"You are in {chosen} house!")
-
-
-
-
-ff = st.slider('Slider test')
-st.write(ff, 'squared is', ff*ff)
-
 
 
