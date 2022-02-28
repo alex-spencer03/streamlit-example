@@ -28,7 +28,7 @@ st.sidebar.radio('9. Client type', ('Private', 'Public'))
 st.sidebar.selectbox('10. Sector', ('Residential', 'Hotel', 'Primary and nursery education', 'Secondary education', 'Higher education', 'Commercial offices',\
                                     'Corporate workspace', 'Healthcare', 'Government', 'Defense', 'Aviation', 'Life sciences/ Pharmaceuticals',\
                                     'Industrial and logistics', 'Other'))
-st.sidebar..selectbox('11. Build type', ('New Build or New Build behind Retained Facade', 'Extension', 'Light Refurb (finishes only)', 'Medium Refurb (finishes + M&E)',\
+st.sidebar.selectbox('11. Build type', ('New Build or New Build behind Retained Facade', 'Extension', 'Light Refurb (finishes only)', 'Medium Refurb (finishes + M&E)',\
                                          'Heavy Refurb (finishes + M&E + structural)', 'New Build + Extension / Refurb'))
 st.sidebar.selectbox('12. Project value', ('< £1m', '£1m - £50m', '£50m - £100m', '£100m >'))
 
