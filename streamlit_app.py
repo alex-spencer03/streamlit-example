@@ -208,7 +208,8 @@ best_tender_score = final_tend[0].max()
 
 with col1:
   st.subheader('Your Procurement Route')
-  st.write('Your preferred procurement route is:', best_proc, 'with a score of', best_proc_score, 'of 100.')
+  st.markdown('**Preferred procurement:**', best_proc)
+  st.write('Score of', best_proc_score, 'of 100.')
   st.bar_chart(final_proc, height = 500)
   
   
