@@ -200,12 +200,11 @@ final_tend = pd.DataFrame(final_tend)
 final_tend.reset_index()
 
 
-another_col, another_col2 = st.columns()
 
-with another_col:
+with col1:
  st.bar_chart(final_proc)
 
- with another_col2:
+ with col2:
   st.bar_chart(final_tend)
   
   
