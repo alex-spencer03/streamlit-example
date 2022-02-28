@@ -52,42 +52,27 @@ st.sidebar.write('Please rate the following on a 0 to 5 scale, 1 being the least
 may apply for each of the statements:')
 
 st.sidebar.caption('* 0 - not applicable')
-st.sidebar.caption('* 1 - very low importance - for Provisional Sums Left in the Contract, you are accepting of having a large portion of the\
-Contract Value (>10%) as Provisional Sums., * 3 -  medium importance - for Contractor Involvement During Design, you are accepting in giving the Contractor design\
-responsibility for some elements of the scheme (waterproofing, structural adaptions etc.), * 5 - very high importance - for Programme Certainty, you are a school \
-that has to be open for term time on 1st September and there is no Plan B if the project is delayed.')
+st.sidebar.caption('* 1 - very low importance - for Provisional Sums Left in the Contract, you are accepting of having a large portion of the Contract Value (>10%)\
+as Provisional Sums.')
+st.sidebar.caption('* 3 -  medium importance - for Contractor Involvement During Design, you are accepting in giving the Contractor design responsibility for some \
+elements of the scheme (waterproofing, structural adaptions etc.)')
+st.sidebar.caption('* 5 - very high importance - for Programme Certainty, you are a school that has to be open for term time on 1st September and there is no Plan B\
+if the project is delayed.')
 
 
-col1, col2, col3 = st.columns((1,2,2))
+risk_transfer = st.sidebar.slider('Risk transfer to the Contractor', min_value = 0, max_value = 5)
+overlapping = st.sidebar.slider('Overlapping design and construction', min_value = 0, max_value = 5)
+contractor_involvement = st.sidebar.slider('Contractor Involvement in Design', min_value = 0, max_value = 5)
+provisional_sums = st.sidebar.slider('Provisional Sums left in the Contract', min_value = 0, max_value = 5)
+market_competition = st.sidebar.slider('Market Competition when Tendering', min_value = 0, max_value = 5)
+contractor_incentive = st.sidebar.slider('Contractor Incentives for Risk Mitigation', min_value = 0, max_value = 5)
+competition_regulations = st.sidebar.slider('Compliance with competition regulations(public body)', min_value = 0, max_value = 5)
 
 
 
-with col1:
-    with st.expander('Tendering & Procurement'):
+col1, col2 = st.columns((1,1))
 
-        
-        st.write('16. Statements')
-        st.write('Please rate the following on a 0 to 5 scale, 1 being the least important and 5 being the most important. Please see below some project examples that \
-        may apply for each of the statements:')
-        
-        """
-        * 0 - not applicable
-        * 1 - very low importance - for Provisional Sums Left in the Contract, you are accepting of having a large portion of the Contract Value (>10%) as Provisional Sums.
-        * 3 -  medium importance - for Contractor Involvement During Design, you are accepting in giving the Contractor design responsibility for some elements \
-        of the scheme (waterproofing, structural adaptions etc.)
-        * 5 - very high importance - for Programme Certainty, you are a school that has to be open for term time on 1st September and there is no Plan B if the \
-        #project is delayed.')
-        """
-        
-        st.write('')   
-        risk_transfer = st.slider('Risk transfer to the Contractor', min_value = 0, max_value = 5)
-        overlapping = st.slider('Overlapping design and construction', min_value = 0, max_value = 5)
-        contractor_involvement = st.slider('Contractor Involvement in Design', min_value = 0, max_value = 5)
-        provisional_sums = st.slider('Provisional Sums left in the Contract', min_value = 0, max_value = 5)
-        market_competition = st.slider('Market Competition when Tendering', min_value = 0, max_value = 5)
-        contractor_incentive = st.slider('Contractor Incentives for Risk Mitigation', min_value = 0, max_value = 5)
-        competition_regulations = st.slider('Compliance with competition regulations(public body)', min_value = 0, max_value = 5)
-       
+
     
 ######## CALCULATIONS ###########
 
@@ -215,10 +200,10 @@ final_tend.reset_index()
 
 
 
-with col2:
+with col1:
  st.bar_chart(final_proc)
 
- with col3:
+ with col2:
   st.bar_chart(final_tend)
   
   
