@@ -199,9 +199,13 @@ final_tend = pd.DataFrame(final_tend)
 final_tend.reset_index()
 
 
+best_proc = final_proc[0].idxmax()
+best_proc_score = final_proc[0].max()
+
 
 with col1:
   st.subheader('Your Procurement Route')
+  st.write('Your preferred procurement route is:', best_proc, 'with a score of', best_proc_score)
   st.bar_chart(final_proc, height = 500)
   
   
