@@ -13,7 +13,7 @@ st.title('Procurement & Tendering App')
 
 add_selectbox = st.sidebar.markdown('# Welcome!')
 
-col1, col2, col3 = st.columns((1,1,1))
+col1, col2 = st.columns((1,1))
 
  
 with col1:
@@ -36,7 +36,7 @@ with col1:
         st.selectbox('12. Project value', ('< £1m', '£1m - £50m', '£50m - £100m', '£100m >'))
 
 
-with col1:
+with col2:
     with st.expander('Tendering & Procurement'):
         preferred_proc_route = st.radio('13. What is your preferred procurement route?', ('Design and Build', 'Traditional', 'Management'))
         preferred_tend_route = st.radio('14. What is your preferred tendering route?', ('Single Stage', 'Two Stage', 'Negotiated'))
@@ -199,10 +199,13 @@ final_tend = df_tend_preferences.sum(axis=0)
 final_tend = pd.DataFrame(final_tend)
 final_tend.reset_index()
 
-with col2:
+
+another_col, another_col2 = st.columns()
+
+with another_col:
  st.bar_chart(final_proc)
 
- with col3:
+ with another_col2:
   st.bar_chart(final_tend)
   
   
