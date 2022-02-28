@@ -11,7 +11,8 @@ st.set_page_config(page_title='My first app', page_icon=':shark:', layout = 'wid
 
 st.title('Procurement & Tendering App')
 
-st.sidebar.markdown('# Welcome!')
+st.sidebar.header('Welcome!')
+st.sidebar.markdown('ggg')
 
 
 
