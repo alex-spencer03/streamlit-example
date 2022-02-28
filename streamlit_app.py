@@ -201,7 +201,7 @@ final_tend.reset_index()
 
 
 with col1:
- st.bar_chart(final_proc, height = 100)
+ st.bar_chart(final_proc, height = 1000)
 
  with col2:
   st.bar_chart(final_tend)
