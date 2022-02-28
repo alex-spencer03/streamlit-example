@@ -47,6 +47,12 @@ quality = st.sidebar.slider('Quality', min_value = 1, max_value = 3, help = 'Qua
 if you are working on a 5* hotel development then meeting the the quality level and tight tolerance desired by the customer is of high importance.')
 
 
+st.sidebar.write('16. Statements')
+st.sidebar.write('Please rate the following on a 0 to 5 scale, 1 being the least important and 5 being the most important. Please see below some project examples that \
+may apply for each of the statements:')
+
+st.sidebar.caption('0 - not applicable')
+
 col1, col2, col3 = st.columns((1,2,2))
 
 
