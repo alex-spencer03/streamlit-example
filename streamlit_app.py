@@ -198,19 +198,23 @@ final_tend = df_tend_preferences.sum(axis=0)
 final_tend = pd.DataFrame(final_tend)
 final_tend.reset_index()
 
-
+# procurement display values
 best_proc = final_proc[0].idxmax()
 best_proc_score = final_proc[0].max()
 
+# tendering display values
+best_tender = final_tend[0].idxmax()
+best_tender_score = final_tend[0].max()
 
 with col1:
   st.subheader('Your Procurement Route')
-  st.write('Your preferred procurement route is:', best_proc, 'with a score of', best_proc_score)
+  st.write('Your preferred procurement route is:', best_proc, 'with a score of', best_proc_score, 'of 100.')
   st.bar_chart(final_proc, height = 500)
   
   
 with col2:
   st.subheader('Your Tenderings Route')
+  st.write('Your preferred tendering route is:',best_tender, 'with a score of', best_tender_score, 'of 100.')
   st.bar_chart(final_tend, height = 500)
   
   
