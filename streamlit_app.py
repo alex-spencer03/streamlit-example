@@ -11,7 +11,9 @@ st.set_page_config(page_title='My first app', page_icon=':shark:', layout = 'wid
 
 st.title('Procurement & Tendering App')
 
-add_selectbox = st.sidebar.markdown('# Welcome!')
+st.sidebar.markdown('# Welcome!')
+
+
 
 col1, col2, col3 = st.columns((1,2,2))
 
