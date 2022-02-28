@@ -77,4 +77,117 @@ with col1:
     
 ######## CALCULATIONS ###########
 
+#### GROUP: Scot, Schedule & Quality
 
+# user input test values
+#cost_certainty = 2
+#programme_certainty = 1
+#quality = 3
+
+################################################ DF details
+# setting df with calculations and user input
+first_cols1 = {'Question':['Price', 'Programme', 'Quality'], 'Score':[cost_certainty, programme_certainty, quality]}
+
+# to dataframe
+df_calcs1 = pd.DataFrame(first_cols1)
+
+# adding group set values as columns
+df_calcs1['Max'] = 3
+df_calcs1['Group_var'] = 60
+
+
+############################# First calculation
+total_score_sum1 = df_calcs1['Score'].sum()
+df_calcs1['Calc1'] = df_calcs1['Score']/total_score_sum1*100
+
+# rounding to whole numbers
+df_calcs1['Calc1'] = np.round(df_calcs1['Calc1'], decimals = 0)
+
+
+########################### Results calculations
+total_calcs1 = df_calcs1['Calc1'].sum()
+df_calcs1['Result_factor'] = df_calcs1['Calc1']/total_calcs1*df_calcs1['Group_var']
+
+# rounding to whole numbers
+df_calcs1['Result_factor'] = np.round(df_calcs1['Result_factor'], decimals = 0)
+
+
+################################################ DF details
+first_cols2 = {'Question':['Risk', 'Overlapping', 'Contractor involvement', 'Provisional sums', 'Competition', 'Incentive',\
+                          'Competition regulations'],\
+               'Score':[risk_transfer, overlapping, contractor_involvement, provisional_sums, market_competition,\
+                       contractor_incentive, competition_regulations]}
+
+# to dataframe
+df_calcs2 = pd.DataFrame(first_cols2)
+
+# adding group set values as new columns
+df_calcs2['Max'] = 5
+df_calcs2['Group_var'] = 40
+
+############################# First calculation
+df_calcs2['Calc1'] = (df_calcs2['Score']/df_calcs2['Max'])/7*100
+
+# converting to int
+#df_calcs2['Calc1'] = df_calcs2['Calc1'].apply(pd.to_numeric)
+
+#rounding up
+df_calcs2['Calc1'] = np.round(df_calcs2['Calc1'], decimals = 0)
+
+########################### Results calculations
+total_calcs2 = df_calcs2['Calc1'].sum()
+
+df_calcs2['Result_factor'] = df_calcs2['Calc1']/total_calcs2*df_calcs2['Group_var']
+
+# converting to int
+#df_calcs2['Result_factor'] = df_calcs2['Result_factor'].apply(pd.to_numeric)
+
+#rounding up
+df_calcs2['Result_factor'] = np.round(df_calcs2['Result_factor'], decimals = 0)
+
+
+
+# combining into one df
+master = df_calcs1.append(df_calcs2, ignore_index=True)
+
+
+
+# setting df with set values and user inputs
+data = {'Question':['Price', 'Programme', 'Quality', 'Risk', 'Overlapping', 'Contractor involvement', 'Provisional sums', 'Competition', 'Incentive',\
+                    'Competition regulations'],\
+        'Proc_Design':[0.33,0.5,0.33,0.5,0.33,0.5,0.5,0.33,0.5,0.38],\
+        'Proc_Traditional':[0.5,0.33,0.5,0.33,0.17,0.17,0.33,0.5,0.33,0.38],\
+        'Proc_Management':[0.17,0.17,0.17,0.17,0.5,0.33,0.17,0.17,0.17,0.25],\
+        'Tendering_Single':[0.33, 0.29, 0.50, 0.38,	0.25, 0.17,	0.33, 0.50, 0.25, 0.38],\
+        'Tendering_Two':[0.33, 0.43, 0.33, 0.38, 0.38, 0.50, 0.33, 0.33, 0.38, 0.38],\
+        'Tendering_Negotiated':[0.33, 0.29, 0.17, 0.25, 0.38, 0.33, 0.33, 0.17, 0.38, 0.25]
+       }
+
+df_fixed_values = pd.DataFrame(data)
+
+
+# new df with preferences
+df_preferences = pd.DataFrame()
+
+# new columns calculating the scores
+df_preferences['Proc_Design'] = df_fixed_values['Proc_Design'] * master['Result_factor']
+df_preferences['Proc_Traditional'] = df_fixed_values['Proc_Traditional'] * master['Result_factor']
+df_preferences['Proc_Management'] = df_fixed_values['Proc_Management']  * master['Result_factor']
+df_preferences['Tendering_Single'] = df_fixed_values['Tendering_Single']  * master['Result_factor']
+df_preferences['Tendering_Two'] = df_fixed_values['Tendering_Two']  * master['Result_factor']
+df_preferences['Tendering_Negotiated'] = df_fixed_values['Tendering_Negotiated']  * master['Result_factor']
+
+# rounding all columns
+df_preferences = df_preferences.round(0)
+
+
+# summing all values in all columns
+test = df_preferences.sum(axis=0)
+
+test = pd.DataFrame(test)
+
+test.reset_index()
+
+test = test.T # or df1.transpose()
+
+st.bar_chart(test)
