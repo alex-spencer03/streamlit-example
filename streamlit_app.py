@@ -166,28 +166,45 @@ data = {'Question':['Price', 'Programme', 'Quality', 'Risk', 'Overlapping', 'Con
 df_fixed_values = pd.DataFrame(data)
 
 
-# new df with preferences
-df_preferences = pd.DataFrame()
+# new df with procurement preferences
+df_proc_preferences = pd.DataFrame()
 
 # new columns calculating the scores
-df_preferences['Proc_Design'] = df_fixed_values['Proc_Design'] * master['Result_factor']
-df_preferences['Proc_Traditional'] = df_fixed_values['Proc_Traditional'] * master['Result_factor']
-df_preferences['Proc_Management'] = df_fixed_values['Proc_Management']  * master['Result_factor']
-df_preferences['Tendering_Single'] = df_fixed_values['Tendering_Single']  * master['Result_factor']
-df_preferences['Tendering_Two'] = df_fixed_values['Tendering_Two']  * master['Result_factor']
-df_preferences['Tendering_Negotiated'] = df_fixed_values['Tendering_Negotiated']  * master['Result_factor']
+df_proc_preferences['Design and Build'] = df_fixed_values['Proc_Design'] * master['Result_factor']
+df_proc_preferences['Traditional'] = df_fixed_values['Proc_Traditional'] * master['Result_factor']
+df_proc_preferences['Management'] = df_fixed_values['Proc_Management']  * master['Result_factor']
 
-# rounding all columns
-df_preferences = df_preferences.round(0)
-
+df_proc_preferences = df_proc_preferences.round(0)
 
 # summing all values in all columns
-test = df_preferences.sum(axis=0)
+final_proc = df_proc_preferences.sum(axis=0)
+final_proc = pd.DataFrame(final_proc)
+final_proc.reset_index()
 
-test = pd.DataFrame(test)
+###############################################################
 
-test.reset_index()
+# new df with tendering preferences
 
-#test = test.T # or df1.transpose()
+df_tend_preferences = pd.DataFrame()
 
-st.bar_chart(test)
+# new columns calculating scores
+df_tend_preferences['Single Stage'] = df_fixed_values['Tendering_Single']  * master['Result_factor']
+df_tend_preferences['Two Stage'] = df_fixed_values['Tendering_Two']  * master['Result_factor']
+df_tend_preferences['Negotiated'] = df_fixed_values['Tendering_Negotiated']  * master['Result_factor']
+
+df_tend_preferences = df_tend_preferences.round(0)
+
+# summing all values in all columns
+final_tend = df_tend_preferences.sum(axis=0)
+final_tend = pd.DataFrame(final_tend)
+final_tend.reset_index()
+
+with col2:
+ st.bar_chart(final_proc)
+
+ with col3:
+  st.bar_chart(final_tend)
+  
+  
+  
+  
