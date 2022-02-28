@@ -188,6 +188,6 @@ test = pd.DataFrame(test)
 
 test.reset_index()
 
-test = test.T # or df1.transpose()
+#test = test.T # or df1.transpose()
 
 st.bar_chart(test)
