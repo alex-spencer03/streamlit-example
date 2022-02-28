@@ -15,14 +15,12 @@ add_selectbox = st.sidebar.markdown('# Welcome!')
 
 col1, col2, col3, col4 = st.columns((1,1,1,1))
 
+ 
 with col1:
-    with st.expander('About You'):
+    with st.expander('About Your Project'):
         st.text_input('1. Your name','')
         st.text_input('2. Your company','')
         st.selectbox('3. Profession',('Quantity Surveyor','Architect','Project Manager', 'Client', 'Designer', 'Other'))
-   
-with col1:
-    with st.expander('About Your Project'):
         st.text_input('4. Project name','')
         st.selectbox('5. RIBA Stages', ('Stage 0-1 Strategic Definition + Feasibility', 'Stage 2-4 Concept, Developed and Technical Design',\
                                     'Stage 5-6 Construction + Handover', 'Stage 7 In Use'))
@@ -80,15 +78,21 @@ with col1:
 ######## CALCULATIONS ###########
 
 # setting df with set values and user inputs
-data = {'Question':['Price Certainty', 'Programme', 'Quality', 'Risk Transfer', 'Overlapping', 'Contractor involvement', 'Provisional sums', 'Competition', 'Incentive',\
-                    'Competition regulations'],\
-       'Score':[cost_certainty, programme_certainty, quality,  risk_transfer, overlapping, contractor_involvement, provisional_sums, market_competition, contractor_incentive,\
+data = {'Question':['Price', 'Programme', 'Quality', 'Risk', 'Overlapping', 'Contractor involvement', 'Provisional sums', 'Competition', 'Incentive', 'Competition regulations'],\
+        'Score':[cost_certainty, programme_certainty, quality,  risk_transfer, overlapping, contractor_involvement, provisional_sums, market_competition, contractor_incentive,\
                competition_regulations],\
-       'Max value':[3,3,3,5,5,5,5,5,5,5],\
-       'Global variable':[60,60,60,40,40,40,40,40,40,40],\
-       'Proc_Design':[0.33,0.5,0.33,0.5,0.33,0.5,0.5,0.33,0.5,0.38],\
-       'Proc_Traditional':[0.5,0.33,0.5,0.33,0.17,0.17,0.33,0.5,0.33,0.38]
+        'Max value':[3,3,3,5,5,5,5,5,5,5],\
+        'Global variable':[60,60,60,40,40,40,40,40,40,40],\
+        'Proc_Design':[0.33,0.5,0.33,0.5,0.33,0.5,0.5,0.33,0.5,0.38],\
+        'Proc_Traditional':[0.5,0.33,0.5,0.33,0.17,0.17,0.33,0.5,0.33,0.38],\
+        'Proc_Management':[0.17,0.17,0.17,0.17,0.5,0.33,0.17,0.17,0.17,0.25],\
+        'Tendering_Single':[0.33, 0.29, 0.50, 0.38,	0.25, 0.17,	0.33, 0.50, 0.25, 0.38],\
+        'Tendering_Two':[0.33, 0.43, 0.33, 0.38,,0.38, 0.50, 0.33, 0.33, 0.38, 0.38],\
+        'Tendering_Negotiated':[0.33, 0.29, 0.17, 0.25, 0.38, 0.33, 0.33, 0.17, 0.38, 0.25]
        }
+
+
+
 #df = pd.DataFrame()
 
 
