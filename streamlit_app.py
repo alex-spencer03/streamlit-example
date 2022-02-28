@@ -11,10 +11,26 @@ st.set_page_config(page_title='My first app', page_icon=':shark:', layout = 'wid
 
 st.title('Procurement & Tendering App')
 
-st.markdown('# Welcome!')
+st.markdown('## Welcome!')
+st.markdown('Please begin by filling in the sidebar fields. Your preferred procurement and tendering routes will then be compared in the below bar charts')
 
-st.sidebar.markdown('# Welcome!')
-st.sidebar.markdown('## Please begin by filling in your details and continue to the project information')
+st.sidebar.markdown('# Project and Preferences')
+st.sidebar.text_input('1. Your name','')
+st.sidebar.text_input('2. Your company','')
+st.sidebar.selectbox('3. Profession',('Quantity Surveyor','Architect','Project Manager', 'Client', 'Designer', 'Other'))
+st.sidebar.text_input('4. Project name','')
+st.sidebar.selectbox('5. RIBA Stages', ('Stage 0-1 Strategic Definition + Feasibility', 'Stage 2-4 Concept, Developed and Technical Design',\
+                                        'Stage 5-6 Construction + Handover', 'Stage 7 In Use'))
+st.sidebar.date_input('6. Start date on site')
+st.sidebar.date_input('7. Completion date')
+st.sidebar.text_input('8. Client name', '')
+st.sidebar.radio('9. Client type', ('Private', 'Public'))
+st.sidebar.selectbox('10. Sector', ('Residential', 'Hotel', 'Primary and nursery education', 'Secondary education', 'Higher education', 'Commercial offices',\
+                                    'Corporate workspace', 'Healthcare', 'Government', 'Defense', 'Aviation', 'Life sciences/ Pharmaceuticals',\
+                                    'Industrial and logistics', 'Other'))
+st.sidebar..selectbox('11. Build type', ('New Build or New Build behind Retained Facade', 'Extension', 'Light Refurb (finishes only)', 'Medium Refurb (finishes + M&E)',\
+                                         'Heavy Refurb (finishes + M&E + structural)', 'New Build + Extension / Refurb'))
+st.sidebar.selectbox('12. Project value', ('< £1m', '£1m - £50m', '£50m - £100m', '£100m >'))
 
 
 
