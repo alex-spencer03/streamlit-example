@@ -32,6 +32,11 @@ st.sidebar.selectbox('11. Build type', ('New Build or New Build behind Retained 
                                          'Heavy Refurb (finishes + M&E + structural)', 'New Build + Extension / Refurb'))
 st.sidebar.selectbox('12. Project value', ('< £1m', '£1m - £50m', '£50m - £100m', '£100m >'))
 
+preferred_proc_route = st.sidebar.radio('13. What is your preferred procurement route?', ('Design and Build', 'Traditional', 'Management'))
+preferred_tend_route = st.sidebar.radio('14. What is your preferred tendering route?', ('Single Stage', 'Two Stage', 'Negotiated'))
+
+
+
 
 
 col1, col2, col3 = st.columns((1,2,2))
@@ -40,8 +45,8 @@ col1, col2, col3 = st.columns((1,2,2))
 
 with col1:
     with st.expander('Tendering & Procurement'):
-        preferred_proc_route = st.radio('13. What is your preferred procurement route?', ('Design and Build', 'Traditional', 'Management'))
-        preferred_tend_route = st.radio('14. What is your preferred tendering route?', ('Single Stage', 'Two Stage', 'Negotiated'))
+       # preferred_proc_route = st.radio('13. What is your preferred procurement route?', ('Design and Build', 'Traditional', 'Management'))
+       # preferred_tend_route = st.radio('14. What is your preferred tendering route?', ('Single Stage', 'Two Stage', 'Negotiated'))
         
         st.write('15. Please rank the following in terms of importance with 1 being the most important and 3 being the least important.')
         
