@@ -13,7 +13,7 @@ st.title('Cost Estimation App')
 
 st.markdown('## Project Information')
 
-col1, col2 = st.columns(1,1)
+col1, col2 = st.columns((1,1))
 
 with col1:
   st.selectbox('What is the location?', ('London', 'Nottingham', 'Edinburgh'))
