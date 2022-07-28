@@ -11,25 +11,21 @@ st.set_page_config(page_title='My first app', page_icon=':shark:', layout = 'wid
 
 st.title('Cost Estimation App')
 
-st.markdown('## Welcome!')
-st.markdown('Please begin by filling in the sidebar fields. Your preferred procurement and tendering routes will then be compared in the below bar charts')
+st.markdown('## Project Information')
 
+col1, col2 = st.columns(1,1)
+
+with col1:
+  st.selectbox('What is the location?', ('London', 'Nottingham', 'Edinburgh'))
+
+
+with col2:
+  st.selectbox('What is the base date?', ('Q2 2022', 'Q3 2022'))
+  
+  
 st.sidebar.markdown('# Project and Preferences')
 
 
-col1, col2 = st.columns((1,1))
 
-
-
-with col1:
-  st.subheader('Your Procurement Route')
-
-  
-  
-with col2:
-  st.subheader('Your Tenderings Route')
-
-  
-  
   
   
