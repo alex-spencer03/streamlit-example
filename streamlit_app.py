@@ -23,16 +23,12 @@ col1, col2 = st.columns((1,1))
 
 with col1:
   st.subheader('Your Procurement Route')
-  st.write('Preferred procurement route:', best_proc)
-  st.write('Score of', best_proc_score, 'of 100.')
-  st.bar_chart(final_proc, height = 500)
+
   
   
 with col2:
   st.subheader('Your Tenderings Route')
-  st.write('Preferred tendering route:',best_tender)
-  st.write('Score of', best_tender_score, 'of 100.')
-  st.bar_chart(final_tend, height = 500)
+
   
   
   
