@@ -24,7 +24,9 @@ with col1:
 with col2:
   st.selectbox('What is the base date?', ('Q2 2022', 'Q3 2022'))
   st.selectbox('What is the contract type?', ('Option1', 'Option2'))
-  st.selectbox('What WELL rating would you like?')
+  st.selectbox('What WELL rating would you like?',('Oustanding', 'Very Good'))
+  
+
   
 st.sidebar.markdown('# Project and Preferences')
 
